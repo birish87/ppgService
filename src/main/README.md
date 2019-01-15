@@ -10,7 +10,10 @@ java -Dserver.port=6492 -jar C:\Users\birish\IdeaProjects\demo\classes\artifacts
 
 If the jar doesn't run, you may need java installed on your machine. I can assist with that.
 
-See also the json postman collection which contains some sample web calls & syntax:
+See also the json postman collection which contains some sample web calls & syntax found here: src>main>resources>
+ppgServiceDemo.postman_collection_General.json
+
+Just update your username and password to match your db usrname and pwd.
 
 Note, /ctrlQuery endpoint takes login credentials, and an 'alias' parameter which references the 'name' of a query,
 likely found in the postgres db > QA_QUERIES table (note, one of the columns is 'name' in that table). This table location

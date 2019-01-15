@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "d4545bf5-9808-4e0a-9635-d970f0824ac6",
+		"name": "ppgServiceDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ppgService_versionedControlledQuery_Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:6492/ctrlQuery?user=yourUsername&pwd=yourPassword&alias=userTokenSelect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"ctrlQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "alias",
+							"value": "userTokenSelect"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppgService_dtpTransReportQuery_SeedTempTables",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:6492/ctrlQuery?user=yourUsername&pwd=yourPassword&alias=dtpTransactionReportQuerySeed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"ctrlQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "alias",
+							"value": "dtpTransactionReportQuerySeed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppgService_dtpTransReportQuery_SelectConditionalResults",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:6492/ctrlQuery?user=yourUsername&pwd=yourPassword&alias=dtpTransactionReportQuerySelect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"ctrlQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "alias",
+							"value": "dtpTransactionReportQuerySelect"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppgService_dtpTransReportQuery_DropTempTbls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:6492/ctrlQuery?user=yourUsername&pwd=yourPassword&alias=dtpTransactionReportQueryDropTmpTables",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"ctrlQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "alias",
+							"value": "dtpTransactionReportQueryDropTmpTables"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppgService_adhocQuery_Post_ofCustom_SelectQuery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customQuery\": \"SELECT * FROM beacon.public.user_tokens\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6492/adhocQuery?user=yourUsername&pwd=yourPassword&customQuery=SELECT * FROM beacon.public.user_tokens ORDER BY id DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"adhocQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "customQuery",
+							"value": "SELECT * FROM beacon.public.user_tokens ORDER BY id DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppgService_CreateTableFromUserTokens",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customQuery\": \"SELECT * FROM beacon.public.user_tokens\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6492/adhocQuery?user=yourUsername&pwd=yourPassword&customQuery=CREATE TABLE QAtesttable AS SELECT access_token, expires_at FROM beacon.public.user_tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"adhocQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "customQuery",
+							"value": "CREATE TABLE QAtesttable AS SELECT access_token, expires_at FROM beacon.public.user_tokens"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppgService_InsertIntoQATestTable",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customQuery\": \"SELECT * FROM beacon.public.user_tokens\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6492/ctrlQuery?user=yourUsername&pwd=yourPassword&alias=qatesttableInsert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"ctrlQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "alias",
+							"value": "qatesttableInsert"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppgService_UpdateQATestTable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customQuery\": \"SELECT * FROM beacon.public.user_tokens\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6492/adhocQuery?user=yourUsername&pwd=yourPassword&customQuery=Update QAtesttable SET expires_at = '2019-01-12 23:00:40.321534' WHERE access_token = 'someName'",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"adhocQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "customQuery",
+							"value": "Update QAtesttable SET expires_at = '2019-01-12 23:00:40.321534' WHERE access_token = 'someName'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ppgService_DropTestTable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customQuery\": \"SELECT * FROM beacon.public.user_tokens\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6492/adhocQuery?user=yourUsername&pwd=yourPassword&customQuery=drop table QAtesttable;",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6492",
+					"path": [
+						"adhocQuery"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "yourUsername"
+						},
+						{
+							"key": "pwd",
+							"value": "yourPassword"
+						},
+						{
+							"key": "customQuery",
+							"value": "drop table QAtesttable;"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
