@@ -1,5 +1,5 @@
 INSERT INTO public."QA_QUERIES_NEW" (name, query)
-VALUES ('userTokenSelectExample002300', $$Delete from reporting.rpt_bsc_claim_history;
+VALUES ('userTokenSelectExample002300', $$Delete from BlahBlah.rpt_bsc_claim_history;
 Delete from reporting.rpt_bsc_dsr_claim_gpi_outcome_prep_data;
 
 INSERT INTO reporting.rpt_bsc_dsr_claim_gpi_outcome_prep_data
