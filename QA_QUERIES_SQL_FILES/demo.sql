@@ -1,4 +1,4 @@
-INSERT INTO public."QA_QUERIES_NEW" (name, query)
+INSERT INTO public."QA_QUERIES" (name, query)
 VALUES ('demoSQL', $$Delete from reporting.rpt_bsc_claim_history;
 Delete from reporting.rpt_bsc_dsr_claim_gpi_outcome_prep_data;
 
