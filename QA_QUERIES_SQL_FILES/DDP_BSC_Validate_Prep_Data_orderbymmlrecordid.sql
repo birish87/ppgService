@@ -1,0 +1,36 @@
+
+INSERT INTO public."QA_QUERIES" (name, query)
+VALUES ('DDP_BSC_Validate_Prep_Data_orderbymmlrecordid', $$select 
+"ReportDate" ,
+"GeminiTransactionID" ,
+"TransactionDate" ,
+"ChosenDrug",
+"ChosenDrugNDC",
+"ClaimDrug",
+"ClaimDate",
+"ClaimDrugNDC",
+"ChangeType",
+"org",
+"ProductLine",
+"requested_chosen_gpi",
+"mml_gpi",
+"alt1_gpi",
+"alt2_gpi",
+"alt3_gpi", 
+"fill_type",
+"mml_record_id",
+"PA_avoided" ,
+is_alternative_fulfillment,
+"ChosenDrugMaintenancePeriodic" ,
+"ChosenDrugDaysSupply",
+"requested_chosen_patient_pay_amount",
+"requested_chosen_total_cost",
+mml_patient_cost ,
+mml_total_cost ,
+"ClaimDrugDaysSupply" ,
+"AnnualPatientSavings" ,
+"AnnualTotalSavings" ,
+"AdjustedPatientSavings" ,
+"AdjustedTotalSavings" 
+from reporting.rpt_bsc_ddp_claim_gpi_outcome_prep_data rbdcgopd 
+where date("ReportDate")=current_timestamp::date order by "ReportDate" desc;$$);
