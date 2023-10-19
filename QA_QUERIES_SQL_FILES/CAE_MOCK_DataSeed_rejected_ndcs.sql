@@ -1,0 +1,3 @@
+
+INSERT INTO public."QA_QUERIES" (name, query)
+VALUES ('CAE_MOCK_DataSeed_rejected_ndcs', $$INSERT INTO rejected_ndcs (ndc, specific_product_id,pbm_name,pbm_id,reject_time,inserted_at, updated_at) SELECT '99999999011', 99900,'Cvs',NULL,'1/1/2021 1:01:01 AM','1/1/2021 1:01:01 AM','1/1/2021 1:01:01 AM' WHERE NOT EXISTS ( SELECT id FROM rejected_ndcs WHERE ndc = '99999999011' AND pbm_name = 'Cvs' ); INSERT INTO rejected_ndcs (ndc, specific_product_id,pbm_name,pbm_id,reject_time,inserted_at, updated_at) SELECT '99999999063', 99921,'Cvs',NULL,'1/1/2021 1:01:00 AM','1/1/2021 1:01:01 AM','1/1/2021 1:01:01 AM' WHERE NOT EXISTS ( SELECT id FROM rejected_ndcs WHERE ndc = '99999999063' AND pbm_name = 'Cvs' ); $$);

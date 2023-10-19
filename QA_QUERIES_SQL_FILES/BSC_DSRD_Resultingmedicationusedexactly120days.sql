@@ -1,0 +1,9 @@
+
+INSERT INTO public."QA_QUERIES" (name, query)
+VALUES ('BSC_DSRD_Resultingmedicationusedexactly120days', $$Delete from rpt_bsc_claim_history;
+Delete from rpt_bsc_dsr_claim_gpi_outcome_prep_data;
+INSERT INTO public.rpt_bsc_claim_history(patient_identifier, new_patient_identifier, carrier_id, account_id, group_id, adjudication_datetime, date_of_service, prescription_service_reference_number, service_provider_id, med_ndc, med_name, med_brand, med_msc, specific_product_id, concept_name, quantity_dispensed, days_supply, fill_number, gpi_14, gpi_8, gpi_4, patient_cost, total_cost, inserted_at, transaction_code, "row_number", med_type)
+VALUES('00433677993333910217345001970-01-02', 'bsc910217345001970-01-02', NULL, NULL, 'E00010022000CMCM0002', '2021-10-10 13:14:15.342', '2021-09-01 13:14:15.342', '000012285355', '1609963818', '62332020730', 'Amlod/Valsartan 5mg-320mg Tab', 'N', 'Y', 14586, 'low ccb / high arb combination', 20.0, 10, '01', '36993002100320', '36993002', '3699', 5.0, 8.24, '2021-09-01 13:14:15.342', '1', 1, 'M');
+INSERT INTO public.rpt_bsc_claim_history(patient_identifier, new_patient_identifier, carrier_id, account_id, group_id, adjudication_datetime, date_of_service, prescription_service_reference_number, service_provider_id, med_ndc, med_name, med_brand, med_msc, specific_product_id, concept_name, quantity_dispensed, days_supply, fill_number, gpi_14, gpi_8, gpi_4, patient_cost, total_cost, inserted_at, transaction_code, "row_number", med_type)
+VALUES('00433677993333910217345001970-01-02', 'bsc910217345001970-01-02', NULL, NULL, 'E00010022000CMCM0002', now()-interval'1 month', now()-interval'1 month', '000012285355', '1609963818', '62332020730', 'Amlod/Valsartan 5mg-320mg Tab', 'N', 'Y', 14586, 'low ccb / high arb combination', 20.0, 10, '01', '36993002100320', '36993002', '3699', 5.0, 8.24, now()-interval'1 month', '1', 1, 'M');
+$$);

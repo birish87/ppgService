@@ -1,0 +1,3 @@
+
+INSERT INTO public."QA_QUERIES" (name, query)
+VALUES ('add_payer_products', $$INSERT INTO payer_products (payer_id,product_type,product_sub_type,inserted_at,updated_at,created_by,updated_by,sps_enabled) SELECT 4,'dsr','D','2023-02-16 16:16:48.102','2023-02-16 16:16:48.102','Beacon Regression','Beacon Regression',true WHERE NOT EXISTS (SELECT id from payer_products where product_type = 'dsr' AND product_sub_type = 'D'); INSERT INTO payer_products (payer_id,product_type,product_sub_type,inserted_at,updated_at,created_by,updated_by,sps_enabled) SELECT 4,'dsr','E','2023-02-16 16:16:48.102','2023-02-16 16:16:48.102','Beacon Regression','Beacon Regression',true WHERE NOT EXISTS (SELECT id from payer_products where product_type = 'dsr' AND product_sub_type = 'E'); $$);

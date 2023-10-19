@@ -1,0 +1,3 @@
+
+INSERT INTO public."QA_QUERIES" (name, query)
+VALUES ('Claim_Medications_DataSeed_template', $$INSERT INTO claim_medications (patient_gender,patient_first_name,patient_last_name,concept_name,ndc,product_name,specific_product_id,quantity,days_supply,maintenance_indicator,date_of_service,prescriber_id,prescriber_last_name,payer_id,pharmacy_id,service_provider_id,bin_number,processor_control_number,cardholder_id,person_code,date_of_birth,prescriber_id_qualifier,service_provider_id_qualifier,inserted_at,updated_at,active,daw_product_selection_code,claim_patient_id,periodic_indicator,total_cost,patient_pay_amount) SELECT  WHERE NOT EXISTS(SELECT id from claim_medications cm where cardholder_id = '' and date_of_birth = '' and ndc='');$$);
